@@ -10,8 +10,7 @@ export default class Layout extends React.Component{
 
 	render(){	
 		return (
-			<div>
-				<hr/>
+			<div style={styles.root} >
 				<h1>React TO-DO</h1>
 				<ul>{this.props.todos.map((todo,key)=>{
 					return <li key={key} onClick={ (event) => {
@@ -24,7 +23,16 @@ export default class Layout extends React.Component{
 						this.props.newItem("Alter triggered from React but Fired from AngularJS")
 					  }
 					}>Click to make Angular Alert!!</button>
+					<br />
+					<br />
 			</div>
 		);
 	}
+}
+
+const styles = {
+	root: {
+		padding: 10,
+		marginTop: 10
+	}	
 }
